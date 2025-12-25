@@ -1,5 +1,5 @@
 // =========================
-// Step 1: Dark Mode Toggle
+// Dark Mode Toggle
 // =========================
 const toggleButton = document.getElementById("toggleTheme");
 
@@ -8,22 +8,15 @@ toggleButton.addEventListener("click", function () {
 });
 
 // =========================
-// Step 2: Fade-in sections on scroll
+// Change background color for section
 // =========================
-const sections = document.querySelectorAll("section");
+const colorButtons = document.querySelectorAll(".colorButton");
 
-window.addEventListener("scroll", checkSections);
-
-function checkSections() {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-
-        if (sectionTop < triggerBottom) {
-            section.classList.add("show");
-        } else {
-            section.classList.remove("show");
-        }
+colorButtons.forEach(button => {
+    button.addEventListener("click", () => {
+       
+        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        
+        button.parentElement.style.backgroundColor = randomColor;
     });
-}
+});
