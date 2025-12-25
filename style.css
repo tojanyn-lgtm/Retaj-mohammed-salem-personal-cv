@@ -1,3 +1,6 @@
+/* ========================= */
+/* Step 1: Basic body styling */
+/* ========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +8,9 @@ body {
     color: #333;
 }
 
+/* ========================= */
+/* Step 2: Header styling */
+/* ========================= */
 header {
     background-color: #1e3a8a;
     color: white;
@@ -21,18 +27,33 @@ header {
     margin: 0 auto 10px;
 }
 
+/* ========================= */
+/* Step 3: Section styling + Fade-in effect */
+/* ========================= */
 section {
     background-color: #ffedd5;
     margin: 15px;
     padding: 20px;
     border-radius: 5px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
 }
 
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section headers */
 h2 {
     border-bottom: 2px solid #f97316;
     padding-bottom: 5px;
 }
 
+/* ========================= */
+/* Step 4: Button styling */
+/* ========================= */
 button {
     padding: 8px 12px;
     border: none;
@@ -43,6 +64,9 @@ button {
     border-radius: 5px;
 }
 
+/* ========================= */
+/* Step 5: Dark mode styling */
+/* ========================= */
 .dark-mode {
     background-color: #1e1e2e;
     color: #fef6f0;
@@ -52,6 +76,9 @@ button {
     background-color: #2e2b3e;
 }
 
+/* ========================= */
+/* Step 6: Responsive styling */
+/* ========================= */
 @media (max-width: 600px) {
     section {
         margin: 10px;
@@ -65,3 +92,7 @@ button {
         height: 100px;
     }
 }
+
+/* ========================= */
+/* End of CSS file */
+/* ========================= */
